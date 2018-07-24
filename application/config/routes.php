@@ -49,6 +49,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+
+
+$route['default_controller'] = 'test';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$routes['welcome'] = 'welcome';
+
+// about URL $route[] の中がURLになる
+
+$route['stud'] = "Stud_controller"; 
+$route['stud/add'] = 'Stud_controller/add_student'; 
+$route['stud/add_view'] = 'Stud_controller/add_student_view'; 
+$route['stud/edit/(\d+)'] = 'Stud_controller/update_student_view/$1'; 
+$route['stud/delete/(\d+)'] = 'Stud_controller/delete_student/$1';
+
+$route['employee'] = "Employee";
+$route['employee/add'] = "Employee/add";
+$route['employee/create'] = "Employee/create";
+
+$route['team'] = "Team";
+$route['team/add'] = "Team/displayform";  //Team/display はControllerからきてる
+$route['team/create'] = "Team/create";
+
